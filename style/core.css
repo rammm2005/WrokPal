@@ -1,0 +1,433 @@
+/* core styling */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'); */
+
+@import url('../plugins/font/Inter/static/font.css');
+
+
+:root {
+    --bg-light: hsl(0, 0%, 100%);
+    --bg-lime-green: #1dbf73;
+    --bg-white: white;
+    --bg-pink-rose: hsl(350, 74%, 67%);
+    --scroller-tumb: #1d9b1d;
+    --bg-gray: rgb(241, 234, 234);
+
+
+    --text-white: #ffff;
+    --text-black: #000000;
+    --text-semiblack: hwb(0 0% 100% / 0.829);
+    --text-green: hsl(120, 100%, 25%);
+    --text-gray: hsla(0, 3%, 50%, 0.876);
+    --text-boldgray: #62646a;
+
+    --box-shadow: 0 .5rem 1.5rem rgba(22, 22, 22, 0.1);
+}
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--scroller-tumb);
+    border-radius: 5rem;
+}
+
+body {
+    background-color: var(--bg-light);
+}
+
+/* Header Section styling */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: var(--bg-white);
+    z-index: 10;
+}
+
+.main-header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.7rem 1.7rem 1rem;
+    border-bottom: 1px solid #e2dede;
+}
+
+.main-header .header-wrapper .logo-workpal {
+    position: relative;
+    display: flex;
+}
+
+.logo-workpal a {
+    text-decoration: none;
+}
+
+.logo-workpal img {
+    max-width: 15rem;
+    height: auto;
+    background: transparent;
+}
+
+.main-header .header-wrapper .search-header .search-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+}
+
+.search-header .search-form .search-input {
+    outline: none;
+    border: none;
+    background: var(--bg-gray);
+    padding: 1.5rem;
+    box-shadow: 1px 0px 0px 1px #0000;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid hsl(0, 6%, 93%);
+    width: 25em;
+}
+
+.search-input::placeholder {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    text-transform: capitalize;
+    font-weight: 550;
+}
+
+.search-header .search-form .search-icon-label {
+    padding: 1.2rem;
+    background-color: var(--scroller-tumb);
+    text-align: center;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    transition: all ease .8s;
+}
+
+.search-header .search-form .search-icon-label i {
+    font-size: 1rem;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.search-header .search-form .search-icon-label:hover {
+    background-color: var(--bg-lime-green);
+}
+
+
+.main-header .header-wrapper .workpal-nav {
+    position: relative;
+}
+
+.workpal-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: nowrap;
+}
+
+.workpal-nav .nav-link .text-link {
+    align-items: center;
+    text-align: center;
+    margin-right: 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-semiblack);
+    font-size: 1.6rem;
+    transition: all ease .8s;
+}
+
+
+
+.workpal-nav .nav-link span {
+    margin-right: 1.7rem;
+    font-size: 1.6rem;
+    color: var(--text-semiblack);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease .8s;
+}
+
+.nav-link span:hover,
+.nav-link .text-link:hover {
+    color: var(--scroller-tumb);
+    letter-spacing: .5px;
+}
+
+.nav-link .btn-sign-up {
+    background-color: transparent;
+    border: 1.8px solid var(--scroller-tumb);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .8s;
+}
+
+.nav-link .btn-sign-up:hover {
+    background-color: var(--bg-lime-green);
+}
+
+.nav-link .btn-sign-up a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    transition: all ease .8s;
+}
+
+.nav-link .btn-sign-up:hover a {
+    color: var(--text-white);
+}
+
+/* End Header Section Styling */
+
+
+
+/* Category Menu */
+
+.category-menu {
+    position: static;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: var(--bg-white);
+    box-shadow: 1px 2px 2px 0px hwb(0 91% 9%);
+    transition: all ease-in-out .6s !important;
+}
+
+.category-menu .category-menu-wrapper {
+    display: flex;
+    flex: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category-menu .category-menu-wrapper ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.category-menu-wrapper .nav-link {
+    padding: 1.3rem;
+}
+
+.category-menu-wrapper .nav-link a {
+    text-decoration: none;
+    list-style-image: none;
+    font-size: 1.5rem;
+    color: var(--text-boldgray);
+    padding: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all ease-in-out .2s;
+}
+
+.category-menu-wrapper .nav-link a:hover {
+    border-bottom: 3px solid var(--scroller-tumb);
+}
+
+/* End Category Menu */
+
+/* HoME menu */
+
+.section-home{
+    display: block;
+    min-height: 100vh;
+}
+.section-slideshow {
+    display: block;
+    align-items: center;
+    max-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-slideshow .header-title{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+    left: 3rem;
+    bottom: 65%;
+    top: 35%;
+    align-items: center;
+    text-align: left;
+}
+
+.header-title .title{
+    max-width: 85%;
+    display: flex;
+    font-weight: 800;
+    flex-wrap: wrap;
+    color: var(--text-white);
+    font-size: 4.7rem;
+    text-transform: capitalize;
+
+}
+
+.header-title .title i{
+    display: flex;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--bg-lime-green);
+    text-align: center;
+    align-items: center;
+}
+.header-title .title b{
+    font-size: 5rem;
+    color: var(--bg-lime-green);
+}
+
+.header-title li{
+    color: var(--text-white);
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.freelance-img-wrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0a4226;
+    margin-top: 2.3rem;
+}
+
+.freelance-img {
+    margin-left: auto;
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+
+.freelance-img #Freelance {
+    height: auto;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.freelance-img .description-name{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    background-color: hsl(0deg 0% 100% / 14%); 
+    color: var(--text-white);
+    border: 1.6px solid hsla(0,0%,100%,.4);
+    backdrop-filter: blur(30px);
+    padding: 1rem;
+    right: 3rem;
+    bottom: 0;
+    margin-bottom: 5rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.freelance-img .description-name i{
+   background-color: hwb(0 87% 12% / 0.14) ;
+    backdrop-filter: blur(33px);
+    padding: .4rem;
+    border-radius: 999px;
+    transition: all ease .6s;
+}
+
+.freelance-img .description-name i:hover{
+    transform: scale(1.1);
+}
+
+.freelance-img .description-name h2{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.freelance-img .description-name p{
+    text-transform: capitalize;
+}
+
+
+.section-company{
+    display: flex;
+    padding:2rem 4%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.section-company .logo-big-company{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    gap: 7px;
+    align-items: center;
+}
+
+.section-company .text{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    color: var(--text-black);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    cursor:default;
+}
+
+.section-company .logo-big-company .img-element{
+    position: relative;
+    max-width: 10rem;
+    flex-direction: row;
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: all ease .7s;
+}
+
+.section-company .logo-big-company .img-element:hover{
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+/* End HoME menu*/
